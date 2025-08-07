@@ -4,10 +4,11 @@ import himym from '../../assets/himym.svg'
 import naruto from '../../assets/naruto.svg'
 import pb from '../../assets/pb.svg'
 import st from '../../assets/st.svg'
+import { Link } from '@tanstack/react-router'
 
 export function Main() {
   return (
-    <main className="container flex justify-center items-center m-auto flex-col">
+    <main className="container flex justify-center items-center m-auto flex-col bg-background">
       <div className="container flex justify-center items-center m-auto flex-col mt-[150px]">
         <h2 className="text-white font-black text-3xl ">
           Acompanhe as séries e desenhos que você assistiu.
@@ -20,12 +21,12 @@ export function Main() {
         </h2>
       </div>
 
-      <a
-        href="#"
+      <Link
+        to='/signup'
         className="bg-green-600 text-white px-4 py-3 rounded mt-[39px] hover:bg-green-500 font-bold text-xl"
       >
         Comece agora mesmo - é grátis!
-      </a>
+      </Link>
 
       <h3 className="text-white mt-[17px] text-xl font-light">
         A rede social para os amantes de séries e desenhos.

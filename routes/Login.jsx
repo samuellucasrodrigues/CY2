@@ -1,10 +1,13 @@
-import { Link } from '@tanstack/react-router'
+
+import { Enter } from '../src/components/Main/login'
 
 export function Login() {
   return (
     <div>
-      <h1>Login</h1>
-      <Link to="/">Voltar para a home</Link>
+      <Enter />
     </div>
   )
 }
+
+
+

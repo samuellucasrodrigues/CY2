@@ -4,7 +4,7 @@ import { Search } from 'lucide-react'
 
 export function Header() {
   return (
-    <header className="bg-[#000]">
+    <header className="bg-background">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <a href="/" className="ml-[84px]">
           <img src={logo} alt="logo" />
@@ -16,12 +16,12 @@ export function Header() {
           >
             ENTRAR
           </Link>
-          <a
-            href="#"
+          <Link
+            href="/signup"
             className="px-4 py-2 text-white font-semibold text-xl hover:underline"
           >
             CRIAR UMA CONTA
-          </a>
+          </Link>
           <a
             href="#"
             className="px-4 py-2 text-white font-semibold text-xl hover:underline"
