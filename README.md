@@ -62,7 +62,7 @@ CY2/
 ├── 📄 index.html                 # Página HTML principal
 ├── 📄 package.json               # Dependências e scripts
 ├── 📄 vite.config.js             # Configuração do Vite
-├── 📄 router.jsx                 # Configuração de rotas
+├── 📄 router.jsx                 # Configuração central de rotas
 ├── 📄 README.md                  # Este arquivo
 │
 ├── 📁 public/                    # Arquivos públicos
@@ -70,12 +70,14 @@ CY2/
 │
 ├── 📁 routes/                    # Páginas da aplicação
 │   ├── 📄 Home.jsx              # Página inicial
-│   └── 📄 Login.jsx             # Página de login
+│   ├── 📄 Login.jsx             # Página de login
+│   ├── 📄 SignUp.jsx            # Página de cadastro
+│   ├── 📄 Series.jsx            # Página de séries
+│   └── 📄 Animation.jsx         # Página de animações/desenhos
 │
 └── 📁 src/                       # Código fonte
     ├── 📄 main.jsx              # Ponto de entrada da aplicação
-    ├── 📄 App.jsx               # Componente principal
-    ├── 📄 index.css             # Estilos globais
+    ├── 📄 index.css             # Estilos globais (Tailwind)
     │
     ├── 📁 assets/               # Recursos estáticos
     │   ├── 📄 logo.svg          # Logo da aplicação
@@ -89,8 +91,13 @@ CY2/
     └── 📁 components/           # Componentes React
         ├── 📁 Header/           # Cabeçalho da aplicação
         │   └── 📄 index.jsx     # Componente Header
-        └── 📁 Main/             # Conteúdo principal
-            └── 📄 index.jsx     # Componente Main
+        ├── 📁 Main/             # Conteúdo principal e variações
+        │   ├── 📄 index.jsx     # Componente Main da landing page
+        │   ├── 📄 login.jsx     # Seção/variante de login
+        │   └── 📄 signup.jsx    # Seção/variante de cadastro
+        └── 📁 Forms/            # Componentes de formulário reutilizáveis
+            ├── 📄 input.jsx
+            └── 📄 inputSignUp.jsx
 ```
 
 ---
@@ -99,7 +106,7 @@ CY2/
 
 ### Pré-requisitos
 
-- Node.js (versão 16 ou superior)
+- Node.js (versão 18 ou superior)
 - npm ou yarn
 
 ### Instalação
@@ -149,6 +156,12 @@ http://localhost:5173
   - Roteamento baseado em TanStack React Router
   - Estrutura de rotas hierárquica
   - Suporte a navegação programática
+  - Rotas atuais:
+    - `/` → `Home`
+    - `/login` → `Login`
+    - `/signup` → `SignUp`
+    - `/series` → `Series`
+    - `/animations` → `Animation`
 
 ### Home Page
 
@@ -165,6 +178,28 @@ http://localhost:5173
 - **Características**:
   - Interface básica de login (em desenvolvimento)
   - Navegação de volta para home
+
+### SignUp Page
+
+- **Localização**: `routes/SignUp.jsx`
+- **Funcionalidade**: Página de cadastro de usuários
+- **Características**:
+  - Campos e validações iniciais (em desenvolvimento)
+  - Integração com componentes de formulário
+
+### Series Page
+
+- **Localização**: `routes/Series.jsx`
+- **Funcionalidade**: Listagem/exploração de séries
+- **Características**:
+  - Estrutura base para futura integração com APIs
+
+### Animation Page
+
+- **Localização**: `routes/Animation.jsx`
+- **Funcionalidade**: Listagem/exploração de animações/desenhos
+- **Características**:
+  - Estrutura base para futura integração com APIs
 
 ### Header Component
 
@@ -183,6 +218,14 @@ http://localhost:5173
   - Mensagens de apresentação
   - Call-to-action principal
   - Galeria de logos de séries populares
+
+### Forms Components
+
+- **Localização**: `src/components/Forms/`
+- **Funcionalidade**: Campos de formulário reutilizáveis para telas de autenticação e cadastro
+- **Arquivos**:
+  - `input.jsx`
+  - `inputSignUp.jsx`
 
 ---
 
@@ -225,7 +268,7 @@ Contribuições são bem-vindas! Para contribuir:
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+Este projeto está sob a licença MIT.
 
 ---
 
