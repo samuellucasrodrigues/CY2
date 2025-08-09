@@ -17,23 +17,23 @@ export function Header() {
             ENTRAR
           </Link>
           <Link
-            href="/signup"
+            to="/signup"
             className="px-4 py-2 text-white font-semibold text-xl hover:underline"
           >
             CRIAR UMA CONTA
           </Link>
-          <a
-            href="#"
+          <Link
+            to="/series"
             className="px-4 py-2 text-white font-semibold text-xl hover:underline"
           >
             SÉRIES
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/animations"
             className="px-4 py-2 text-white font-semibold text-xl hover:underline"
           >
             DESENHOS
-          </a>
+          </Link>
           <div className="relative">
             <input
               type="text"

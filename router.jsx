@@ -9,6 +9,8 @@ import {
 import { Home } from "./routes/Home.jsx";
 import { Login } from "./routes/Login.jsx";
 import { SignUp } from "./routes/SignUp.jsx";
+import { Series } from "./routes/Series.jsx";
+import { Animation } from "./routes/Animation.jsx";
 
 const rootRoute = createRootRoute({
   component: () => <Outlet />,
@@ -32,7 +34,19 @@ const signupRoute = createRoute({
   component: SignUp,
 });
 
-const routeTree = rootRoute.addChildren([homeRoute, loginRoute,signupRoute]);
+const seriesRoute = createRoute({
+  path: "/series",
+  getParentRoute: () => rootRoute,
+  component: Series,
+});
+
+const animationRoute = createRoute({
+  path: "/animations",
+  getParentRoute: () => rootRoute,
+  component: Animation,
+});
+
+const routeTree = rootRoute.addChildren([homeRoute, loginRoute,signupRoute,seriesRoute,animationRoute]);
 
 export const router = createRouter({ routeTree });
 
